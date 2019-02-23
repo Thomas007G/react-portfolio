@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import NavBar from './NavBar.js'
 export class TodoList extends Component {
   render() {
-    return (
-      <div>
-        Hello
-      </div>
-    )
+    console.log(this.props.todos)
+    return this.props.todos.map((todo) => (
+      <h3>{ todo.title }</h3>
+    ));
   }
 }
 
